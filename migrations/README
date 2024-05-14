@@ -1,0 +1,8 @@
+Чтобы сформировать миграции нужно применить команду
+alembic revision --autogenerate -m "DataBase creation"
+
+Чтобы создать таблицы из миграций нужно в созданной версии миграциии
+ (BaseProject_FastApi\migrations\versions)
+взять revision: str = '0a5094cdf056'
+и выполнить команду
+alembic upgrade 0a5094cdf056
